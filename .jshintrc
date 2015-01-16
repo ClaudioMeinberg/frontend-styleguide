@@ -1,0 +1,13 @@
+{
+	"globals": {
+		"angular": true,
+		"$module": true,
+		"console": true
+	},
+	"strict": false,
+	"debug": true,
+	"validthis": false,
+	"quotmark": false,
+	"undef": true,
+	"esnext": true
+}

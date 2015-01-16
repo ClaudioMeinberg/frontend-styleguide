@@ -1,11 +1,21 @@
+# References
+
+	- http://addyosmani.com/blog/javascript-style-guides-and-beautifiers/
+	- https://github.com/rwaldron/idiomatic.js
+	- https://github.com/johnpapa/angularjs-styleguide
+	- https://github.com/toddmotto/angularjs-styleguide
+
 # Single Responsibility
+
 	- One component per file
 	- One responsibility per component (SOLID)
 
 # IIFE
+
 	- Is mandatory
 
 # Controllers
+
 	- Use controllerAs syntax
 	- Bindables on top
 	- Use functions to group implementation details
@@ -36,6 +46,7 @@ function DomainListController(DomainService) {
 ```
 
 # Services/Factories
+
 	- Module Reveal Pattern
 	- If possible, always return a `Promise`
 
@@ -60,6 +71,7 @@ function DomainService($http, ...) {
 ```
 
 # Directives
+
 	- One directive per file
 	- Separate model and business logic from directive's linking
 	- Avoid scope isolation. Use child scopes if necessary
@@ -122,7 +134,7 @@ function ctDirectiveController(DomainService, Domain) {
 	- Will be handled by the build process
 
 # Naming
-	- Service/Factory: `DomainService`. Always PascalCase (domain.service.js) 
+	- Service/Factory: `DomainService`. Always PascalCase (domain.service.js)
 	- Controller: `DomainActionController`. Always PascalCase (domain-action.controller.js)
 	- Directive: `ctName`. Always use prefixes, and avoid too broad terms (ct-name.directive.js)
 	- Tests: (*.spec.js)
@@ -130,6 +142,13 @@ function ctDirectiveController(DomainService, Domain) {
 	- Styles: (domain-action.scss)
 
 # Application Structure
+
+```
+	/domain
+		/domain.service.js
+		/domain.service.spec.js
+		/domain-foo.filter
+```
 
 # Application Structure LIFT Principle
 

@@ -1,0 +1,12 @@
+@import 'foo';
+@import 'bar/baz';
+.rule {
+	.nested {
+		content: '';
+	}
+}
+
+.other {
+	rule {}
+}
+
