@@ -3,10 +3,7 @@
 	- One responsibility per component (SOLID)
 
 # IIFE
-	Not necessary. A gulp task will do
-
-# Modules
-	One module per application domain, one top module to join all the other modules
+	- Is mandatory
 
 # Controllers
 	- Use controllerAs syntax
@@ -14,9 +11,9 @@
 	- Use functions to group implementation details
 
 ```
-$module.controller('Domain/ListController', Domain_ListController);
+$module.controller('DomainListController', DomainListController);
 
-function Domain_ListController(DomainService) {
+function DomainListController(DomainService) {
 	var model = this;
 	model.update = fetchTheList;
 	model.create = createTheItem;
@@ -125,9 +122,12 @@ function ctDirectiveController(DomainService, Domain) {
 	- Will be handled by the build process
 
 # Naming
-	- Service/Factory: `DomainService`. Always PascalCase
-	- Controller: `Domain/ActionController`. Always PascalCase
-	- Directive: `ctDirectiveName`. Always use prefixes, and avoid too broad terms
+	- Service/Factory: `DomainService`. Always PascalCase (domain.service.js) 
+	- Controller: `DomainActionController`. Always PascalCase (domain-action.controller.js)
+	- Directive: `ctName`. Always use prefixes, and avoid too broad terms (ct-name.directive.js)
+	- Tests: (*.spec.js)
+	- Views: (domain-action.html)
+	- Styles: (domain-action.scss)
 
 # Application Structure
 
@@ -141,14 +141,4 @@ function ctDirectiveController(DomainService, Domain) {
 # Modularity
 
 	- One module per domain with business logic, base components and any reusable logic
-	- One top-level module to group all the other modules, 
-
-# Startup Logic
-
-# Angular $ Wrapper Services
-
-# Testing
-
-# Comments
-
-# Constants
+	- One top-level module to group all the other modules, plus controllers and views.
