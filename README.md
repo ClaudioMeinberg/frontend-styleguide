@@ -9,7 +9,6 @@
 	One module per application domain, one top module to join all the other modules
 
 # Controllers
-	- Naming: `Domain/ActionController`. Always PascalCase
 	- Use controllerAs syntax
 	- Bindables on top
 	- Use functions to group implementation details
@@ -40,7 +39,6 @@ function Domain_ListController(DomainService) {
 ```
 
 # Services/Factories
-	- Naming: `DomainService`
 	- Module Reveal Pattern
 	- If possible, always return a `Promise`
 
@@ -68,7 +66,6 @@ function DomainService($http, ...) {
 	- One directive per file
 	- Separate model and business logic from directive's linking
 	- Avoid scope isolation. Use child scopes if necessary
-	- Always use prefixes
 	- Always return the directive configuration on top
 	- Restrict to elements and attributes.
 	- Use controller as syntax with a directive to be consistent with using controller as with view and controller pairings
@@ -128,20 +125,29 @@ function ctDirectiveController(DomainService, Domain) {
 	- Will be handled by the build process
 
 # Naming
-
-# Application Structure LIFT Principle
+	- Service/Factory: `DomainService`. Always PascalCase
+	- Controller: `Domain/ActionController`. Always PascalCase
+	- Directive: `ctDirectiveName`. Always use prefixes, and avoid too broad terms
 
 # Application Structure
 
+# Application Structure LIFT Principle
+
+	"L" ocating our code is easy
+	"I" dentify code at a glance
+	"F" lat structure as long as we can
+	"T" ry to stay DRY (Don’t Repeat Yourself) or T-DRY
+
 # Modularity
+
+	- One module per domain with business logic, base components and any reusable logic
+	- One top-level module to group all the other modules, 
 
 # Startup Logic
 
 # Angular $ Wrapper Services
 
 # Testing
-
-# Animations
 
 # Comments
 
