@@ -1,0 +1,3 @@
+# References
+
+	- http://www.smashingmagazine.com/2014/10/07/introduction-to-unit-testing-in-angularjs/

@@ -10,7 +10,7 @@
 	- One component per file
 	- One responsibility per component (SOLID)
 
-# IIFE
+# IIFE - code wrapping
 
 	- Is mandatory
 
@@ -144,10 +144,21 @@ function ctDirectiveController(DomainService, Domain) {
 # Application Structure
 
 ```
-	/domain
-		/domain.service.js
-		/domain.service.spec.js
-		/domain-foo.filter
+	/app
+		/app.module.js
+		/app.config.js
+		/app.run.js
+		/app.routes.js
+
+	/foo
+		/foo.service.js
+		/foo.service.spec.js
+		/foo-something.filter.js
+
+	/bar
+		/bar.service.js
+		/bar.service.spec.js
+		/bar-something.filter.js
 ```
 
 # Application Structure LIFT Principle
@@ -161,3 +172,10 @@ function ctDirectiveController(DomainService, Domain) {
 
 	- One module per domain with business logic, base components and any reusable logic
 	- One top-level module to group all the other modules, plus controllers and views.
+
+# Code maintainance
+
+	- Always work on feature branches
+	- Always branch off the dev
+	- Always use `--no-ff` to merge branches
+	- Commit messages [follow this pattern](http://bit.ly/1EoiPja)

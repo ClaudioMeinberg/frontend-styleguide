@@ -9,5 +9,6 @@
 	"validthis": false,
 	"quotmark": false,
 	"undef": true,
-	"esnext": true
+	"esnext": true,
+	"jasmine": true
 }
