@@ -79,48 +79,61 @@ function DomainService($http, ...) {
 	- Restrict to elements and attributes.
 	- Use controller as syntax with a directive to be consistent with using controller as with view and controller pairings
 
+```javascript
+// DatePicker.factory.js
+
+(function() {
+	$module.factory('DatePicker', function() {
+		function DatePicker($element, $attrs) {
+			this.date = new Date();
+		}
+
+		DatePicker.prototype = {
+			constructor: DatePicker,
+			previousMonth: previousMonth
+		};
+
+		function previousMonth() {
+
+		}
+
+		return DatePicker;
+	});
+})();
 ```
-$module.directive('ctDirective', ctDirective);
-$module.controller('CtDirectiveController', ctDirectiveController);
 
-function ctDirective() {
-	return {
-		restrict: 'EA',
-		scope: true,
-		controller: 'CtDirectiveController',
-		controllerAs: 'ctDirective',
-		link: linker
-	};
+```javascript
+// datepicker.directive.js
 
-	function linker($scope, $element, $attrs) {
-		$scope.
-	}
-}
+(function() {
+	function datePickerDirective(DatePicker) {
+		return {
+			scope: true,
+			templateUrl: 'datepicker.html',
+			restrict: 'EA',
+			require: '?ngModel',
+			link: linker
+		};
 
-function ctDirectiveController(DomainService, Domain) {
-	var vm = this;
-
-	vm.create = createItem;
-	initialize();
-
-	function initialize() {
-		resetNewItem();
-		setDefaultValues();
+		function linker($scope, $element, $attrs) {
+			$scope.datepicker = new DatePicker($element, $attrs);
+		}
 	}
 
-	function resetNewItem() {
-		vm.newItem = new Domain();
-	}
+	$module.directive('datepicker', datePickerDirective);
+})();
+```
 
-	function createItem() {
-		DomainService.create(vm.newItem).then(resetNewItem);
-	}
+```html
+<!-- datepicker.html -->
 
-	function setDefaultValues() {
-
-	}
-}
-
+<div class="datepicker">
+	<header>
+		<button ng-click="datepicker.previousMonth()"></button>
+		<div class="month"></div>
+		<button ng-click="datepicker.nextMonth()"></button>
+	</header>
+</div>
 ```
 
 # Resolving Promises for a Controller
