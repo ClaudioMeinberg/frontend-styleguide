@@ -75,6 +75,8 @@ function DomainService($http, ...) {
 	- One directive per file
 	- Separate model and business logic from directive's linking
 	- Avoid scope isolation. Use child scopes if necessary
+	- Avoid as much as possible the `replace` config. It will bite you.
+		https://github.com/angular/angular.js/issues/9837
 	- Always return the directive configuration on top
 	- Restrict to elements and attributes.
 	- Use controller as syntax with a directive to be consistent with using controller as with view and controller pairings
@@ -209,5 +211,4 @@ function DomainService($http, ...) {
 
 # Testing
 	
-	- Use our other repo as a reference: https://github.com/contentools/angular-unit-testing
-	
+Use [our other repo](https://github.com/contentools/angular-unit-testing) as a reference
