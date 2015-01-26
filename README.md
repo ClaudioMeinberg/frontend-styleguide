@@ -91,9 +91,14 @@ function DomainService($http, ...) {
 		DatePicker.prototype = {
 			constructor: DatePicker,
 			previousMonth: previousMonth
+			nextMonth: nextMonth
 		};
 
 		function previousMonth() {
+
+		}
+
+		function nextMonth() {
 
 		}
 
@@ -138,7 +143,7 @@ function DomainService($http, ...) {
 
 # Resolving Promises for a Controller
 	- Whenever possible, use route resolvers
-	- Always give feedback about what you are doing. Loading, updating. updated, error happened.
+	- Always give feedback about what you are doing: updating, updated, error.
 
 # Manual Annotating for Dependency Injection
 	- Should be avoided. Annotations should be automated in the build process
@@ -157,16 +162,25 @@ function DomainService($http, ...) {
 # Application Structure
 
 ```
+	/index.html
+
 	/app
 		/app.module.js
 		/app.config.js
 		/app.run.js
 		/app.routes.js
 
-	/foo
-		/foo.service.js
-		/foo.service.spec.js
-		/foo-something.filter.js
+		/writer
+			/WriterEditController.js
+			/WriterEditController.spec.js
+			/writer-edit.html
+			/writer-edit.scss
+
+	/writer
+		/writer.module.js
+		/writer.service.js
+		/writer.service.spec.js
+		/writer-something.filter.js
 
 	/bar
 		/bar.service.js
@@ -191,4 +205,9 @@ function DomainService($http, ...) {
 	- Always work on feature branches
 	- Always branch off the dev
 	- Always use `--no-ff` to merge branches
-	- Commit messages [follow this pattern](http://bit.ly/1EoiPja)
+	- Commit messages follow AngularJS pattern (http://bit.ly/1EoiPja)
+
+# Testing
+	
+	- Use our other repo as a reference: https://github.com/contentools/angular-unit-testing
+	
