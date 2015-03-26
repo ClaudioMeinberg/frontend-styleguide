@@ -79,7 +79,7 @@ function DomainService($http, ...) {
 		https://github.com/angular/angular.js/issues/9837
 	- Always return the directive configuration on top
 	- Restrict to elements and attributes.
-	- Use controller as syntax with a directive to be consistent with using controller as with view and controller pairings
+	- Use "controller as" syntax within a directive to be consistent with other components
 
 ```javascript
 // DatePicker.factory.js
@@ -212,3 +212,35 @@ function DomainService($http, ...) {
 # Testing
 	
 Use [our other repo](https://github.com/contentools/angular-unit-testing) as a reference
+
+# Commits
+
+We follow a set of conventions based on [this document](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y)
+from AngularJS project.
+
+Each commit message must summarize where things changed, what was changed and what kind of change was made.
+
+The __kinds__ of change can be: `feat, fix, chore, style, test, docs, refactor`
+
+The definition of __what changed__ may be the component/class name, the module changed prefixed by `#` or
+a `*` character if the changes apply to several components.
+
+Examples of commit messages:
+
+	feat(ProductEditController): add method to save the product changes
+
+	fix(AuthService): login method now returns the authentication error on failure
+
+	chore: update README file
+
+	style(page-edit.html): change background of primary action buttons to green
+
+	test(ProductService): add missing use case test for saveProduct() method
+
+	docs(UserService): update documentation of getProfile() method
+
+	refactor(OrderService): split placeOrder() method into smaller private methods
+
+	fix(*): add missing translation markers on product related pages
+
+	refactor(#order): replace table markup with grid component on product listing pages
