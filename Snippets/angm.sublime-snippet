@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+(function (module) {
+	/**
+	 * @$2
+	 */
+	function $3() {
+		$0
+	}
+
+	module.$2('$3', $3);
+
+})(angular.module('${1}'));
+]]></content>
+	<tabTrigger>angm</tabTrigger>
+	<scope>source.js</scope>
+	<description>Angular dependency</description>
+</snippet>
