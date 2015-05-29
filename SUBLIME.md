@@ -6,7 +6,7 @@ These tips and tricks will make the coding life a lot easier!
 
 	- SublimeLinter
 	- SublimeLinter-jshint
-	- SublimeLinter-pep257
+	- AutoPEP8
 	- SASS
 	- SASS Snippets
 	- AngularJS Snippets
@@ -54,7 +54,8 @@ Some little improvements you may like:
 	"draw_white_space": "all",
 	"font_size": 9,
 	"copy_with_empty_selection": false,
-	highlight_modified_tabs: true,
+	"highlight_modified_tabs": true,
+	"trim_trailing_white_space_on_save": true,
 	"ignored_packages":
 	[
 		"Vintage"
