@@ -4,11 +4,11 @@
 	/**
 	 * @$2
 	 */
-	function $3() {
+	function $3$4() {
 		$0
 	}
 
-	module.$2('$3', $3);
+	module.$2('$3', $3$4);
 
 })(angular.module('${1}'));
 ]]></content>

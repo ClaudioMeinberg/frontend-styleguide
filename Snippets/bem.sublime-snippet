@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+beforeEach(module('$1'));
+]]></content>
+	<tabTrigger>bem</tabTrigger>
+	<scope>source.js</scope>
+	<description>beforeEach(module)</description>
+</snippet>
