@@ -50,16 +50,12 @@ Some little improvements you may like:
 
 ```json
 {
-	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
+	"copy_with_empty_selection": false,
 	"draw_white_space": "all",
 	"font_size": 9,
-	"copy_with_empty_selection": false,
 	"highlight_modified_tabs": true,
 	"trim_trailing_white_space_on_save": true,
-	"ignored_packages":
-	[
-		"Vintage"
-	]
+	"rulers": [ 72, 80, 120 ]
 }
 ```
 
