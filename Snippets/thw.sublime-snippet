@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+expect($1).toHaveBeenCalledWith($2);
+]]></content>
+	<tabTrigger>thw</tabTrigger>
+	<scope>source.js</scope>
+	<description>expect().toHaveBeenCalledWith()</description>
+</snippet>
